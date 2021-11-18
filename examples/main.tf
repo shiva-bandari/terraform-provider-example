@@ -1,7 +1,8 @@
-provider "terraform-provider-example"{
-    address = "http://localhost:8080/albums"
-    port = "8080"
-}
-resource "example_item" "item" {
-    id = "2"
+terraform {
+  required_providers {
+    example={
+      version = "1.0.0"
+      source = "example.com/local/example"
+    }
+  }
 }
